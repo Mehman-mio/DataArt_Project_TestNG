@@ -21,6 +21,7 @@ public class LoginPageNegativeTests extends BaseTest {
     public void loginPageNegativeTestWithInvalidEmail() throws IOException{
         LoginPage loginPage = PageFactory.initElements(driver, LoginPage.class);
         loginPage.loginPageWithInvalidEmailScenarioMethods();
+        loginPage.getActualText();
         Assertions assertions = PageFactory.initElements(driver, Assertions.class);
         assertions.assert_IfThereIsErrorMessage();
     }
@@ -28,6 +29,7 @@ public class LoginPageNegativeTests extends BaseTest {
     public void loginPageNegativeTestEmptyEmailField() throws IOException{
         LoginPage loginPage = PageFactory.initElements(driver, LoginPage.class);
         loginPage.loginPageEmptyEmailFieldScenarioTestMethods();
+        loginPage.getActualText();
         Assertions assertions = PageFactory.initElements(driver, Assertions.class);
         assertions.assert_IfThereIsErrorMessage();
     }
@@ -35,6 +37,7 @@ public class LoginPageNegativeTests extends BaseTest {
     public void loginPageNegativeTestEmptyPasswordField() throws IOException{
         LoginPage loginPage = PageFactory.initElements(driver, LoginPage.class);
         loginPage.loginPageEmptyPasswordFieldScenarioTestMethods();
+        loginPage.getActualText();
         Assertions assertions = PageFactory.initElements(driver, Assertions.class);
         assertions.assert_IfThereIsErrorMessage();
     }
@@ -42,6 +45,7 @@ public class LoginPageNegativeTests extends BaseTest {
     public void loginPageNegativeTestEmptyFields() throws IOException{
         LoginPage loginPage = PageFactory.initElements(driver, LoginPage.class);
         loginPage.loginPageEmptyFieldsTestMethods();
+        loginPage.getActualText();
         Assertions assertions = PageFactory.initElements(driver, Assertions.class);
         assertions.assert_IfThereIsErrorMessage();
     }

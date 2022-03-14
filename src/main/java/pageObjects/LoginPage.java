@@ -82,7 +82,6 @@ public class LoginPage {
         try {
             Assertions.expectedErrorMessage = expectedMessage;
             Assertions.actualErrorMessage = errorMessage.getText();
-            System.out.println("The error message is appeared");
         }
         catch(Throwable pageNavigationError){
                 System.out.println("The error message is not appeared");

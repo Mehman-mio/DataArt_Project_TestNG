@@ -19,7 +19,6 @@ public class ImagesPage {
         try{
             Assertions.expectedImagesPage = Config.getExpectedUrl();
             Assertions.actualPage = driver.getCurrentUrl();
-            System.out.println("I am in the Images Page");
         }
         catch(Throwable pageNavigationError){
             System.out.println("I am in the wrong page");
