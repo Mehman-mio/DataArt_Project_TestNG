@@ -14,6 +14,9 @@ public class Config {
     public static String getUrl() throws IOException {
         return getPropertyObject().getProperty("url");
     }
+    public static String getExpectedUrl() throws IOException {
+        return getPropertyObject().getProperty("expectedUrl");
+    }
     public static String getValidEmail() throws IOException {
         return getPropertyObject().getProperty("validEmail");
     }

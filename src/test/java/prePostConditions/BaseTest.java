@@ -3,8 +3,7 @@ package prePostConditions;
 import config.Config;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.annotations.AfterSuite;
-import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.*;
 import utils.TestUtils;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
@@ -13,7 +12,7 @@ public class BaseTest {
 
     public WebDriver driver;
 
-    @BeforeSuite
+    @BeforeMethod
     public void setUp() throws IOException {
         System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver.exe");
         driver = new ChromeDriver();
@@ -22,7 +21,7 @@ public class BaseTest {
         driver.manage().deleteAllCookies();
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
     }
-    @AfterSuite
+    @AfterMethod
     public void tearDown(){
         TestUtils.sleep(2000);
         driver.quit();

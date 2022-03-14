@@ -1,21 +1,30 @@
 package pageObjects;
 
+import assertion.Assertions;
+import config.Config;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
-
-import java.util.concurrent.TimeUnit;
+import org.testng.Assert;
+import utils.TestUtils;
 
 public class ImagesPage {
+
     private WebDriver driver;
-    public ImagesPage(WebDriver driver){
+
+    public ImagesPage(WebDriver driver) {
 
         this.driver = driver;
     }
-//    @FindBy(xpath = "//a[@id='menuOnlinePayment']") private WebElement menuPaymentButton;
-//
-//    public void clickİnvoiceButton() {
-//        driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
-//        menuPaymentButton.click();
-//    }
+    String expectedPage;
+
+    public void checkWebPage(){
+        TestUtils.sleep(3000);
+        try{
+            Assertions.expectedImagesPage = Config.getExpectedUrl();
+            Assertions.actualPage = driver.getCurrentUrl();
+            System.out.println("I am in the Images Page");
+        }
+        catch(Throwable pageNavigationError){
+            System.out.println("I am in the wrong page");
+        }
+    }
 }
