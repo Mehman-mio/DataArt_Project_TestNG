@@ -9,7 +9,7 @@ import java.io.IOException;
 
 public class LoginPagePositiveTest extends BaseTest {
 
-    @Test(priority = 1)
+    @Test
     public void loginPageTest() throws IOException{
         LoginPage loginPage = PageFactory.initElements(driver, LoginPage.class);
         loginPage.loginPagePositiveTestMethods();

@@ -77,7 +77,7 @@ public class LoginPage {
         clickLoginButton();
     }
     //-------------------------------------------------------------//
-    //These method for assertion
+    //This method for assertion
     public void getActualText(){
         try {
             Assertions.expectedErrorMessage = expectedMessage;
