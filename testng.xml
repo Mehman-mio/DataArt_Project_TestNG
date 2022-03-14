@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="C:/Users/ZenBooks/IdeaProjects/Module_Payment_TestNG">
+        <classes>
+            <class name="loginTests.LoginPagePositiveTest">
+                <methods>
+                    <include name="loginPageTest"/>
+                    <include name="profileSelectionPageTest"/>
+                    <include name="mainPageTest"/>
+                    <include name="paymentPageTest1"/>
+                    <include name="newPaymentModalWinTest"/>
+                    <include name="paymentPageTest2"/>
+                    <include name="gppPageTest"/>
+                    <include name="assertExpectedWithActual"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
